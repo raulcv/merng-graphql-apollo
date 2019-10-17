@@ -17,7 +17,7 @@ module.exports = {
         async getImage(_, { imgId }) {
             try {
                 const image = await Image.findById(imgId);
-                console.log(image);
+                //console.log(image);
                 if (image) {
                     return image;
                 } else {
@@ -53,7 +53,7 @@ module.exports = {
             try {
                 const image = await Image.findById(imgId);
                 if (user.username === image.username) {
-                    console.log(image);
+                    //console.log(image);
                     await image.delete();
                     return 'Imagen eliminado correctamente';
                 } else {
